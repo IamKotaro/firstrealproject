@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Amedia Studio - Photography Studio</title>
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* Custom CSS for your website's ambiance */
+      body {
+        background-color: #f7f7f7;
+        font-family: Arial, sans-serif;
+      }
+      .hero {
+        background-image: url("./img/photo.avif");
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        text-align: center;
+        padding: 100px 0;
+      }
+      .hero h2 {
+        font-size: 48px;
+      }
+      .hero p {
+        font-size: 24px;
+      }
+      /* Add more custom styles here */
+    </style>
+  </head>
+  <body>
+    <!-- Bootstrap Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background: #bfaa8b"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="#"
+          ><img
+            src="./img/Amedea Logo.png"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                href="#"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                href="#"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                href="#"
+                data-toggle="modal"
+                data-target="#bookingModal"
+                >Booking</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                href="#"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div
+        style="background: rgba(0, 0, 0, 0.288)"
+        class="p-5 m-5 rounded"
+      >
+        <div class="container">
+          <h2>Capture the Colors of Life with Amedia Studio</h2>
+          <p>Your trusted photography studio for all occasions.</p>
+          <a
+            href="#"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#bookingModal"
+            >Book Now</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section style="background: #bfaa8b"></section>
+
+    <!-- Booking Modal -->
+    <div
+      class="modal fade"
+      id="bookingModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="bookingModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              class="modal-title"
+              id="bookingModalLabel"
+            >
+              Book Your Session
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+              <div class="form-group">
+                <label for="bookingDate">Booking Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="bookingDate"
+                />
+              </div>
+
+              <!-- Branch Selection Cards -->
+              <h5>Select a Branch:</h5>
+              <div class="card-deck">
+                <div
+                  class="card"
+                  style="cursor: pointer"
+                  onclick="selectBranch(1)"
+                >
+                  <img
+                    src="branch1.jpg"
+                    class="card-img-top"
+                    alt="Branch 1"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Branch 1</h5>
+                  </div>
+                </div>
+                <div
+                  class="card"
+                  style="cursor: pointer"
+                  onclick="selectBranch(2)"
+                >
+                  <img
+                    src="branch2.jpg"
+                    class="card-img-top"
+                    alt="Branch 2"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Branch 2</h5>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="submitBooking()"
+            >
+              Submit Booking
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more Bootstrap components for other sections as needed -->
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light text-center py-3">
+      <div class="container">
+        <p>&copy; 2023 Amedia Studio. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      function selectBranch(branchNumber) {
+        // Handle the selection of the branch (you can add your logic here)
+        alert("Branch " + branchNumber + " selected!");
+      }
+
+      function submitBooking() {
+        // Handle the submission of the booking form (you can add your logic here)
+        alert("Booking submitted!");
+      }
+    </script>
+  </body>
+</html>
